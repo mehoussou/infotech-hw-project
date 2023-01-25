@@ -1,1 +1,33 @@
 
+//create one folder in terra folder vpc.tf
+
+resources "aws_vpc" "main" {
+ cidr_bloack = "10.0.0.0/16"
+ 
+ tags = {
+  Name = "main"
+ }
+}
+ 
+ //create internet gateway
+ 
+ resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.main.id
+  
+    tags = {
+      Name = "igw"
+     }
+    }
+    
+  // create private and public subnet
+  
+  resource "aws-subnet" "private-us-east-2a" {
+    vpc_id    = aws_vpc.main.id
+    cidr_blOCK = "10.0.0.0/19"
+    availability_zone = "us-east-2a"
+    
+    tags = {
+      "Name"
+      
+ 
+ 
