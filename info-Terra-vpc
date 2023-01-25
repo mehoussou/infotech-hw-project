@@ -65,6 +65,14 @@ resources "aws_vpc" "main" {
              }
              POLICY
              }
+             
+             
+             
+             
+     //create IAM OIDC pROVIDER EKS Using Terraform with file name iam-oidc.tf
+    https://youtu.be/MZyrxzb7yAU  url for iam oidc provider
+    
+     
     
     
     // Create public load balancer on EKS with file name: deployment.yml
@@ -108,6 +116,8 @@ resources "aws_vpc" "main" {
                 value: devops
                 effect: NoSchedule
                 
+                
+        // Create private load balancer on EKS with file name: deployment.yml
                  
               
              
